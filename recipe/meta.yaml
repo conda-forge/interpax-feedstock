@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/interpax-{{ version }}.tar.gz
-  sha256: db8d12b9d13d9c2f0788375bc035e4f6f3c0b2b5e70d0e699a272b4c0b0757e8
+  url: https://github.com/f0uriest/interpax/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: c4306e9f13e6c781ccdb2bf36c42f3ed95534b7a40f8526046513bc5a9b051fc
 
 build:
   noarch: python
@@ -19,12 +19,12 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
-    - versioneer-518
+    - versioneer
   run:
     - python >={{ python_min }}
     - equinox >=0.11,<0.12
-    - jax >=0.3.2,<0.5.0
-    - numpy >=1.20.0,<2.2
+    - jax >=0.3.2,<0.6.0
+    - numpy >=1.20.0,<3
 
 test:
   imports:
