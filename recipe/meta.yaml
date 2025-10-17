@@ -1,5 +1,5 @@
 {% set name = "interpax" %}
-{% set version = "0.3.10" %}
+{% set version = "0.3.11" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/f0uriest/interpax/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 00546b89071d0863dade13199538354dff9d90e5b0b07f90852d6c00f8815484
+  sha256: 0bd3803ed2750b090b1ab16037b6b4d4f9a17f70a4675940b6d38cc8932c067f
 
 build:
   noarch: python
