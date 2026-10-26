@@ -1,6 +1,5 @@
 {% set name = "interpax" %}
-{% set version = "0.3.15" %}
-{% set python_min = "3.10" %}
+{% set version = "0.3.16" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://github.com/f0uriest/interpax/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f4273b8b4e656b1d5427535d484dd65ba5abe7aab81a5fb1a64de84ca82acb50
+  sha256: b107df3e24479dcaad288874e1fa1054864bb016c0dc59bba35b6d2555f4dca0
 
 build:
   noarch: python
@@ -22,11 +21,12 @@ requirements:
     - setuptools
     - versioneer
   run:
+    - jaxkd >=0.1.2,<0.2
     - jaxtyping >=0.2.24,<0.4
     - lineax >=0.0.5,<0.2
     - python >={{ python_min }}
     - equinox >=0.11.0,<0.14
-    - jax >=0.5.0,<0.12
+    - jax >=0.5.0,<0.13
     - numpy >=1.20.0,<2.6
 
 test:
